@@ -48,4 +48,10 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxjava:2.2.9")
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
     implementation("com.firebaseui:firebase-ui-auth:8.0.2")
+
+    //Material
+    implementation("com.google.android.material:material:1.1.0")
+
+    //Firebase database
+    implementation("com.google.firebase:firebase-database:19.3.0")
 }
