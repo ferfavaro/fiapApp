@@ -61,7 +61,7 @@ dependencies {
     implementation("com.firebaseui:firebase-ui-auth:8.0.2")
 
     //Material
-    implementation("com.google.android.material:material:1.1.0")
+    implementation("com.google.android.material:material:1.4.0")
 
     //Firebase database
     implementation("com.google.firebase:firebase-database:21.0.0")

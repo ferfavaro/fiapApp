@@ -63,15 +63,15 @@ class SplashScreenActivity: AppCompatActivity() {
     }
 
     private fun delaySplashScreen() {
-        Completable.timer(3, TimeUnit.SECONDS,AndroidSchedulers.mainThread())
-            .subscribe {
-                firebaseAuth.addAuthStateListener(listener);
-            }
+//        Completable.timer(3, TimeUnit.SECONDS,AndroidSchedulers.mainThread())
+//            .subscribe {
+//                firebaseAuth.addAuthStateListener(listener);
+//            }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(R.layout.activity_client_home)
 
         init()
     }
