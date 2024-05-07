@@ -36,7 +36,7 @@ class SplashScreenActivity: AppCompatActivity() {
     private lateinit var listener: FirebaseAuth.AuthStateListener
 
 
-   private lateinit var database:FirebaseDatabase
+    private lateinit var database:FirebaseDatabase
     private lateinit var driverInfoRef:DatabaseReference
 
     override fun onStart() {
@@ -145,25 +145,29 @@ class SplashScreenActivity: AppCompatActivity() {
 
         // Event
 
-        btn_continue.setOnClickListener({
-            if(TextUtils.isDigitsOnly(edit_first_name.text.toString()))
-            {
-                Toast.makeText(this@SplashScreenActivity, "Please enter first Name",Toast.LENGTH_SHORT).show()
+        btn_continue.setOnClickListener {
+            if (TextUtils.isDigitsOnly(edit_first_name.text.toString())) {
+                Toast.makeText(
+                    this@SplashScreenActivity,
+                    "Please enter first Name",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
-            }
-            else       if(TextUtils.isDigitsOnly(edit_Last_name.text.toString()))
-            {
-                Toast.makeText(this@SplashScreenActivity, "Please enter last Name",Toast.LENGTH_SHORT).show()
+            } else if (TextUtils.isDigitsOnly(edit_Last_name.text.toString())) {
+                Toast.makeText(
+                    this@SplashScreenActivity,
+                    "Please enter last Name",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
-            }
-
-            else       if(TextUtils.isDigitsOnly(edit_phone_number.text.toString()))
-            {
-                Toast.makeText(this@SplashScreenActivity, "Please enter Phone Number",Toast.LENGTH_SHORT).show()
+            } else if (TextUtils.isDigitsOnly(edit_phone_number.text.toString())) {
+                Toast.makeText(
+                    this@SplashScreenActivity,
+                    "Please enter Phone Number",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return@setOnClickListener
-            }
-
-            else{
+            } else {
                 val model = DriverInfoModel()
                 model.firstName = edit_first_name.text.toString()
                 model.lastName = edit_Last_name.text.toString()
@@ -172,19 +176,27 @@ class SplashScreenActivity: AppCompatActivity() {
 
                 driverInfoRef.child(FirebaseAuth.getInstance().currentUser!!.uid)
                     .setValue(model)
-                    .addOnFailureListener {e ->
-                        Toast.makeText(this@SplashScreenActivity, ""+e.message, Toast.LENGTH_SHORT).show()
+                    .addOnFailureListener { e ->
+                        Toast.makeText(
+                            this@SplashScreenActivity,
+                            "" + e.message,
+                            Toast.LENGTH_SHORT
+                        ).show()
                         dialog.dismiss()
 
                     }
                     .addOnSuccessListener {
-                        Toast.makeText(this@SplashScreenActivity, "Register Succesfully", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this@SplashScreenActivity,
+                            "Register Succesfully",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         dialog.dismiss()
 
                     }
 
             }
-        })
+        }
 
 
     }
