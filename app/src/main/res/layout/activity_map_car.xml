@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mapCarLayout"
@@ -8,48 +7,64 @@
     android:layout_height="match_parent"
     tools:context=".MapCarActivity">
 
+    <!-- Background Image -->
+
     <!-- Search input at the top -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mapa"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="59dp" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/searchInput"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Search"
+        android:layout_height="30dp"
         android:layout_margin="16dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:hint="Search"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Distance RadioGroup -->
     <RadioGroup
         android:id="@+id/distanceRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/searchInput"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/searchInput">
 
         <RadioButton
             android:id="@+id/radio10km"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10 km"/>
+            android:background="@color/white"
+            android:text="10 km" />
+
         <RadioButton
             android:id="@+id/radio20km"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20 km"/>
+            android:background="@color/white"
+            android:text="20 km" />
     </RadioGroup>
 
-    <!-- Car image and details -->
+    <!-- Car 1: Hyundai HB20 -->
     <ImageView
         android:id="@+id/carImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/hb20"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/distanceRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/distanceRadioGroup" />
 
     <TextView
         android:id="@+id/carTitle"
@@ -57,9 +72,9 @@
         android:layout_height="wrap_content"
         android:text="Hyundai HB20 - 2021"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/carImage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/carImage" />
 
     <TextView
         android:id="@+id/carRating"
@@ -67,51 +82,142 @@
         android:layout_height="wrap_content"
         android:text="4.5 (124 avaliações)"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/carTitle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/carTitle" />
 
-    <!-- Rent button -->
     <Button
         android:id="@+id/rentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF5F00"
         android:text="Alugar"
+        android:textColor="@color/white"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/carRating"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/carRating" />
+
+    <!-- Car 2: Chevrolet Onix -->
+    <ImageView
+        android:id="@+id/onixImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/onix"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rentButton" />
+
+    <TextView
+        android:id="@+id/onixTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chevrolet Onix - 2021"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onixImage" />
+
+    <TextView
+        android:id="@+id/onixRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.3 (98 avaliações)"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onixTitle" />
+
+    <Button
+        android:id="@+id/onixRentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5F00"
+        android:text="Alugar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onixRating" />
+
+    <!-- Car 3: Volkswagen Polo -->
+    <ImageView
+        android:id="@+id/poloImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/polo"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onixRentButton" />
+
+    <TextView
+        android:id="@+id/poloTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volkswagen Polo - 2021"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poloImage" />
+
+    <TextView
+        android:id="@+id/poloRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.6 (150 avaliações)"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poloTitle" />
+
+    <Button
+        android:id="@+id/poloRentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5F00"
+        android:text="Alugar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poloRating" />
 
     <!-- Filter button -->
     <Button
         android:id="@+id/filterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF5F00"
         android:text="Filter"
-        app:layout_constraintTop_toBottomOf="@id/rentButton"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/poloRentButton" />
 
     <!-- List button -->
     <Button
         android:id="@+id/listButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FF5F00"
         android:text="Listar"
-        app:layout_constraintTop_toBottomOf="@id/filterButton"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/filterButton" />
 
     <!-- Filter dialog (Initially hidden) -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/filterDialog"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/listButton"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/listButton">
 
         <!-- Filter content goes here -->
 

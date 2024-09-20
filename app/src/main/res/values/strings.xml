@@ -16,15 +16,18 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-
     <!-- Buttons and Actions -->
-    <string name="back_button">Back</string>
-    <string name="submit_purchase">Submit Purchase</string>
+    <string name="back_button">Voltar</string>
+    <string name="submit_purchase">Confirmar Compra</string>
 
     <!-- Vehicle Details -->
-    <string name="car_image">Car Image</string>
+    <string name="car_image">Imagem do Veículo</string>
     <string name="vehicle_name">HB20</string>
-
+    <string name="hb20_name">Hyundai HB20 - 2021</string>
+    <string name="onix_name">Chevrolet Onix - 2021</string>
+    <string name="polo_name">Volkswagen Polo - 2021</string>
+    <string name="onix_image">Chevrolet Onix - 2021</string>
+    <string name="polo_image">Volkswagen Polo - 2021</string>
 
     <string name="vehicle_details_title">Detalhes do Veículo</string>
     <string name="additions_title">Adicionar</string>
@@ -32,8 +35,8 @@
     <string name="price_title">Preço</string>
 
     <!-- Menu -->
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
+    <string name="menu_home">Início</string>
+    <string name="menu_gallery">Galeria</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_maps">MapsActivity</string>
 </resources>

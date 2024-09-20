@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Vehicle Details Section -->
+    <!-- Adicionar seção de detalhes do veículo -->
     <LinearLayout
         android:id="@+id/vehicleDetailsSection"
         android:layout_width="0dp"
@@ -59,18 +59,69 @@
                 android:id="@+id/carImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/hb20"
-                android:contentDescription="@string/car_image" />
+                android:contentDescription="@string/car_image"
+                android:src="@drawable/hb20" />
 
             <TextView
                 android:id="@+id/vehicleName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/vehicle_name"
                 android:layout_marginStart="16dp"
-                android:gravity="center_vertical" />
+                android:gravity="center_vertical"
+                android:text="@string/hb20_name" />
+        </LinearLayout>
+
+        <!-- Adicionar informações do Onix -->
+        <LinearLayout
+            android:id="@+id/onixDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/onixImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/onix_image"
+                android:src="@drawable/onix" />
+
+            <TextView
+                android:id="@+id/onixName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/onix_name" />
+        </LinearLayout>
+
+        <!-- Adicionar informações do Polo -->
+        <LinearLayout
+            android:id="@+id/poloDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/poloImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/polo_image"
+                android:src="@drawable/polo" />
+
+            <TextView
+                android:id="@+id/poloName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/polo_name" />
         </LinearLayout>
     </LinearLayout>
+
 
     <!-- Additions Section -->
     <LinearLayout
@@ -185,6 +236,7 @@
         android:layout_height="wrap_content"
         android:text="@string/submit_purchase"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#4CAF50" />
+        android:backgroundTint="#4CAF50"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
