@@ -8,13 +8,14 @@
     >
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="291dp"
         android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <Button
@@ -30,14 +31,13 @@
 
         <Button
             android:id="@+id/btn_google_sign_in"
-            android:padding="16dp"
-            android:background="@drawable/button_border"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
             android:drawableLeft="@drawable/fui_ic_googleg_color_24dp"
+            android:padding="16dp"
             android:text="Logar com o Google"
-            android:textColor="@android:color/black"
-        />
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 

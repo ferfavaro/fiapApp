@@ -10,20 +10,20 @@
 
         android:background="@drawable/mapa"
     >
+
         <Button
             android:id="@+id/button_text"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="@drawable/button_border_map"
-            android:layout_marginTop="80dp"
             android:layout_marginHorizontal="20dp"
-            android:text="Av. Paulista, 1230"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/button_border_map"
             android:drawableLeft="@drawable/search"
-            android:textColor="@android:color/darker_gray"
+            android:padding="16dp"
+            android:text="Av. Paulista, 1230"
             android:textAlignment="viewStart"
 
-            android:padding="16dp">
-        </Button>
+            android:textColor="@android:color/darker_gray"></Button>
 
         <LinearLayout
             android:layout_width="match_parent"

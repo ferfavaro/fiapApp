@@ -6,6 +6,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".ShoppingCartActivity">
 
     <!-- Back Button -->
@@ -14,23 +15,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/back_button"
-        android:backgroundTint="#FFA500"
+        android:backgroundTint="#FF5F00"
+        android:layout_marginBottom="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Title -->
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/vehicle_details_title"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:layout_marginBottom="16dp"
         app:layout_constraintTop_toBottomOf="@id/backButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Adicionar seção de detalhes do veículo -->
+    <!-- Vehicle Details Section -->
     <LinearLayout
         android:id="@+id/vehicleDetailsSection"
         android:layout_width="0dp"
@@ -49,11 +52,13 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
+        <!-- Car Information -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
             <ImageView
                 android:id="@+id/carImage"
@@ -68,17 +73,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
-                android:text="@string/hb20_name" />
+                android:text="@string/hb20_name"
+                android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Adicionar informações do Onix -->
+        <!-- Additional Vehicle Details (Onix and Polo) -->
         <LinearLayout
             android:id="@+id/onixDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
 
             <ImageView
                 android:id="@+id/onixImage"
@@ -93,17 +100,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
-                android:text="@string/onix_name" />
+                android:text="@string/onix_name"
+                android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Adicionar informações do Polo -->
         <LinearLayout
             android:id="@+id/poloDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
 
             <ImageView
                 android:id="@+id/poloImage"
@@ -118,10 +126,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
-                android:text="@string/polo_name" />
+                android:text="@string/polo_name"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
-
 
     <!-- Additions Section -->
     <LinearLayout
@@ -131,7 +139,8 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/vehicleDetailsSection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:id="@+id/additionsTitle"
@@ -163,7 +172,8 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/additionsSection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:id="@+id/discountTitle"
@@ -193,7 +203,8 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/discountSection"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp">
 
         <TextView
             android:id="@+id/priceTitle"
@@ -236,7 +247,8 @@
         android:layout_height="wrap_content"
         android:text="@string/submit_purchase"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#4CAF50"
-        tools:ignore="MissingConstraints" />
+        android:backgroundTint="#FF5F00"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/priceSection" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

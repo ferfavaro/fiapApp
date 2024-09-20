@@ -8,8 +8,6 @@
     tools:context=".MapCarActivity">
 
     <!-- Background Image -->
-
-    <!-- Search input at the top -->
     <ImageView
         android:id="@+id/backgroundImage"
         android:layout_width="match_parent"
@@ -17,26 +15,39 @@
         android:scaleType="centerCrop"
         android:src="@drawable/mapa"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="59dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
+    <!-- Search input at the top -->
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/searchInput"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_margin="16dp"
-        android:background="@color/white"
-        android:hint="Search"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button_border_map"
+        android:drawableLeft="@drawable/search"
+        android:padding="16dp"
+        android:hint="Av. Paulista, 1230"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/darker_gray"
+        android:drawablePadding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Distance RadioGroup -->
+
+    <!-- Car 1: Hyundai HB20 -->
     <RadioGroup
         android:id="@+id/distanceRadioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="552dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchInput">
 
@@ -49,13 +60,12 @@
 
         <RadioButton
             android:id="@+id/radio20km"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="118dp"
+            android:layout_height="20dp"
             android:background="@color/white"
             android:text="20 km" />
     </RadioGroup>
 
-    <!-- Car 1: Hyundai HB20 -->
     <ImageView
         android:id="@+id/carImage"
         android:layout_width="wrap_content"
@@ -184,29 +194,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/poloRating" />
 
-    <!-- Filter button -->
-    <Button
-        android:id="@+id/filterButton"
-        android:layout_width="wrap_content"
+    <!-- Horizontal Layout for Filter and List buttons -->
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FF5F00"
-        android:text="Filter"
-        android:textColor="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/poloRentButton" />
+        app:layout_constraintTop_toBottomOf="@id/poloRentButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_horizontal">
 
-    <!-- List button -->
-    <Button
-        android:id="@+id/listButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF5F00"
-        android:text="Listar"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/filterButton" />
+        <!-- Filter button -->
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:backgroundTint="#FF5F00"
+            android:background="@drawable/button_border_filter"
+            android:drawableLeft="@drawable/filter"
+            android:text="Filter"
+            android:textColor="@color/white" />
+
+        <!-- List button -->
+        <Button
+            android:id="@+id/listButton"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+
+            android:backgroundTint="#FF5F00"
+            android:background="@drawable/button_border_list"
+            android:drawableLeft="@drawable/text_align_center"
+            android:text="Listar"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
     <!-- Filter dialog (Initially hidden) -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -217,10 +243,21 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listButton">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Filter content goes here -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter options here" />
+
+        <Button
+            android:id="@+id/closeFilterDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5F00"
+            android:text="Close"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/searchInput" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
