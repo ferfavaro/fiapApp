@@ -27,16 +27,39 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ClientHomeActivity"
-            android:exported="true">
-        </activity>
 
-        <!-- Declare LoginActivity here -->
+        <!-- Declare LoginActivity  -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
         </activity>
+
+        <!-- Declare MapCarActivity  -->
+        <activity
+            android:name=".MapCarActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Declare MapCarViewModel   -->
+        <activity
+            android:name=".MapCarViewModel"
+            android:exported="true">
+        </activity>
+
+
+        <!-- Declare ShoppingCartActivity   -->
+
+        <activity
+            android:name=".ShoppingCartActivity"
+            android:exported="true">
+        </activity>
+
+
+
+
+
+
+
 
     </application>
 

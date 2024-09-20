@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 val intent =
-                    Intent(this, ClientHomeActivity::class.java) // Change to ClientHomeActivity
+                    Intent(this, MapCarActivity::class.java) // Change to MapCarActivity.kt
                 startActivity(intent)
                 finish()
             }

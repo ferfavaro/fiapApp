@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">fiapapp</string>
+
+    <!-- Registration -->
     <string name="continue_text">Registrar-se</string>
-    <string name="register_text">Crie sua conta !</string>
+    <string name="register_text">Crie sua conta!</string>
     <string name="first_name">Nome</string>
     <string name="last_name">Sobrenome</string>
     <string name="phone_number">Telefone</string>
-    <string name="title_activity_client_home">ClientHomeActivity</string>
+
+    <!-- Navigation -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -13,10 +16,24 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+
+    <!-- Buttons and Actions -->
+    <string name="back_button">Back</string>
+    <string name="submit_purchase">Submit Purchase</string>
+
+    <!-- Vehicle Details -->
+    <string name="car_image">Car Image</string>
+    <string name="vehicle_name">HB20</string>
+
+
+    <string name="vehicle_details_title">Detalhes do Veículo</string>
+    <string name="additions_title">Adicionar</string>
+    <string name="discount_title">Desconto</string>
+    <string name="price_title">Preço</string>
+
+    <!-- Menu -->
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_maps">MapsActivity</string>
-
-
 </resources>

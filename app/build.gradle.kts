@@ -60,6 +60,7 @@ dependencies {
     implementation("com.firebaseui:firebase-ui-auth:8.0.2") // Ensure this is compatible
     implementation("com.google.firebase:firebase-auth:22.0.0")
 
+
     //Firebase database
     implementation("com.google.firebase:firebase-database:21.0.0") // Keep the same version as firebase-auth
 }
