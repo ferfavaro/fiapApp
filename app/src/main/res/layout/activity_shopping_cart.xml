@@ -219,25 +219,25 @@
             android:id="@+id/tripPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preço da Viagem: R$ 0.00" />
+            android:text="Preço da Viagem: R$ 60.00" />
 
         <TextView
             android:id="@+id/fare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tarifa: R$ 0.00" />
+            android:text="Tarifa: R$ 3.00" />
 
         <TextView
             android:id="@+id/tax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tributo: R$ 0.00" />
+            android:text="Tributo: R$ 0.90" />
 
         <TextView
             android:id="@+id/totalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preço Total: R$ 0.00" />
+            android:text="Preço Total: R$ 63.90" />
     </LinearLayout>
 
     <!-- Submit Button -->

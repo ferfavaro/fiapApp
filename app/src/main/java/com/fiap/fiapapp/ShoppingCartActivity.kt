@@ -1,11 +1,13 @@
 package com.fiap.fiapapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class ShoppingCartActivity : AppCompatActivity() {
@@ -43,11 +45,17 @@ class ShoppingCartActivity : AppCompatActivity() {
         totalPrice = findViewById(R.id.totalPrice)
         submitButton = findViewById(R.id.submitButton)
 
+        val backButton: Button = findViewById(R.id.backButton)
+
+        backButton.setOnClickListener {
+            finish()
+        }
+
         // Receber dados do Intent
         val vehicleNameExtra = intent.getStringExtra("vehicleName") ?: "Hyundai HB20 - 2021"
-        val tripPriceExtra = intent.getFloatExtra("tripPrice", 0f)
-        val fareExtra = intent.getFloatExtra("fare", 0f)
-        val taxExtra = intent.getFloatExtra("tax", 0f)
+        val tripPriceExtra = intent.getFloatExtra("tripPrice", 60f)
+        val fareExtra = intent.getFloatExtra("fare", 3f)
+        val taxExtra = intent.getFloatExtra("tax", 0.9f)
 
         // Definir informações do veículo
         setVehicleInfo(vehicleNameExtra)
@@ -59,7 +67,14 @@ class ShoppingCartActivity : AppCompatActivity() {
         totalPrice.text = "Preço Total: R$ ${tripPriceExtra + fareExtra + taxExtra}"
 
         submitButton.setOnClickListener {
-            // Lógica para confirmar a compra
+            Toast.makeText(this, "Parabéns pela compra", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MapCarActivity::class.java)
+
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            startActivity(intent)
+
+            finish()
         }
     }
 
