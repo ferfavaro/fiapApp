@@ -11,9 +11,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hintEnabled="true"
         android:layout_marginBottom="16dp"
-        android:boxStrokeColor="@android:color/black"> <!-- Added black border -->
+        > <!-- Added black border -->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_email"
             android:hint="Email"
@@ -27,9 +26,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hintEnabled="true"
         android:layout_marginBottom="16dp"
-        android:boxStrokeColor="@android:color/black"> <!-- Added black border -->
+        > <!-- Added black border -->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_password"
             android:layout_width="match_parent"
@@ -49,5 +47,5 @@
         android:backgroundTint="#FF5F00"
         android:textColor="@android:color/white"
         android:padding="16dp"
-        android:cornerRadius="8dp" />
+        />
 </LinearLayout>
